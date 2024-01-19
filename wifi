@@ -1,0 +1,9 @@
+#nmcli d wifi connect KukSoolWon$1 password kuksanim
+if [ "`nmcli -g NAME con show --active`" == "Master Paul" ]; 
+then 
+    echo "Connected" 
+else 
+    echo "Connecting ..." 
+    nmcli d wifi list > /dev/null
+    nmcli d wifi connect 'Master Paul' password ba7266b76ba3  
+fi
